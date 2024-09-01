@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Recettes</title>
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Mes Recettes</h1>
+    </header>
+
+    <main>
+        <!-- Section pour ajouter une nouvelle recette -->
+        <section id="ajouter-recette">
+            <h2>Ajouter une Nouvelle Recette</h2>
+            <form id="form-ajouter-recette">
+                <input type="text" id="titre" placeholder="Titre de la recette" required>
+                <input type="text" id="ingredients" placeholder="Ingredients" required>
+                <input type="text" id="instructions" placeholder="Instructions" required>
+                <input type="file" id="image" accept="image/*" required>
+                <button type="submit">Ajouter la Recette</button>
+            </form>
+        </section>
+
+        <!-- Section pour afficher les recettes -->
+        <section id="recettes">
+            <!-- Les recettes ajoutées seront affichées ici -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mes Recettes</p>
+    </footer>
+
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url('../img/fond.jpg'); /* Chemin vers ton image de fond */
+    background-size: cover; /* Ajuste l'image pour couvrir tout le fond */
+    background-position: center; /* Centre l'image de fond */
+    background-repeat: no-repeat; /* Évite que l'image se répète */
+}
+
+header {
+    background-color: rgba(255, 111, 97, 0.8); /* Arrière-plan avec transparence */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Arrière-plan blanc semi-transparent pour lisibilité */
+    border-radius: 10px;
+}
+
+#ajouter-recette {
+    margin-bottom: 30px;
+}
+
+#ajouter-recette form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; /* Ajustement pour responsive */
+    max-width: 400px; /* Limite la largeur maximale */
+    margin: 0 auto;
+}
+
+#ajouter-recette input,
+#ajouter-recette button {
+    padding: 10px;
+    font-size: 1em;
+}
+
+#ajouter-recette button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#ajouter-recette button:hover {
+    background-color: #e65b50;
+}
+
+#recettes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.recette {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100% - 40px); /* Ajuste la largeur pour responsive */
+    max-width: 300px; /* Limite la largeur maximale */
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.recette:hover {
+    transform: scale(1.05);
+}
+
+.recette h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.recette-image {
+    width: 100%; /* Ajuste l'image à la largeur du conteneur */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.recette button {
+    margin: 5px; /* Espacement entre les boutons */
+}
+
+.recette .supprimer {
+    background-color: #d9534f;
+}
+
+.recette .supprimer:hover {
+    background-color: #c9302c;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8); /* Arrière-plan avec transparence */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Media queries pour rendre le site responsive */
+@media (min-width: 600px) {
+    #recettes {
+        justify-content: flex-start;
+    }
+
+    .recette {
+        width: calc(50% - 40px); /* Deux recettes par ligne pour les écrans moyens */
+    }
+}
+
+@media (min-width: 900px) {
+    .recette {
+        width: calc(33.333% - 40px); /* Trois recettes par ligne pour les grands écrans */
+    }
+}
